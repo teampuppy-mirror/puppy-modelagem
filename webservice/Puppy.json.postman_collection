@@ -44,7 +44,9 @@
 			"write": true,
 			"order": [
 				"c3634341-e1af-e5b2-9c92-71edece9a175",
-				"f956dc5c-1c20-1260-2cfd-87c4fa9862a9"
+				"f956dc5c-1c20-1260-2cfd-87c4fa9862a9",
+				"2a7709ff-1141-32ae-5f83-ea3be1a0f330",
+				"7dea2679-c0a2-1c31-b80d-ab579c0450db"
 			],
 			"collection_name": "Puppy",
 			"collection_owner": "11499",
@@ -58,17 +60,17 @@
 			"description": "",
 			"write": true,
 			"order": [
-				"7dea2679-c0a2-1c31-b80d-ab579c0450db",
-				"f6d2b216-cd5b-5018-32cf-84fbd3d421ad",
-				"3aba1817-b40a-1eec-02f0-eba28c6a925f",
+				"69888953-d0b2-7e43-cc34-191476c633fa",
 				"b655da05-3e4f-9bed-defa-56517a26f813",
-				"2a7709ff-1141-32ae-5f83-ea3be1a0f330"
+				"f6d2b216-cd5b-5018-32cf-84fbd3d421ad",
+				"3aba1817-b40a-1eec-02f0-eba28c6a925f"
 			],
 			"collection_name": "Puppy",
 			"collection_owner": "11499",
 			"collection_id": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
 			"collection": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
-			"owner": "11499"
+			"owner": "11499",
+			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263"
 		},
 		{
 			"id": "5f1466b2-e6a4-0eb8-e284-70c44a899be4",
@@ -185,30 +187,28 @@
 			"helperAttributes": {},
 			"collectionOwner": 0,
 			"synced": false,
-			"folder": "687924e1-7b6c-9a8d-188a-71d1148ec854"
+			"folder": "11bf112f-4114-7352-0b23-7ac45b480ab6",
+			"write": true
 		},
 		{
 			"id": "3aba1817-b40a-1eec-02f0-eba28c6a925f",
 			"headers": "",
-			"url": "{{webservice}}/pet",
-			"pathVariables": {},
+			"url": "{{webservice}}/pet/1",
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "DELETE",
-			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
 			"data": [],
 			"dataMode": "params",
-			"name": "Pet - Apagar um pet",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1428766620725,
 			"version": 2,
-			"responses": [],
 			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\nvar data = JSON.parse(responseBody);\ntests[\"Tem @context\"] = !!data[\"@context\"];\ntests[\"Tem @graph\"] = !!data[\"@graph\"];",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"collectionOwner": 0,
-			"synced": false,
-			"folder": "687924e1-7b6c-9a8d-188a-71d1148ec854"
+			"time": 1428770077773,
+			"name": "Pet - Apagar um pet",
+			"description": "",
+			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
+			"responses": [],
+			"synced": false
 		},
 		{
 			"id": "54cf3f94-e0ed-8553-398b-e068ec84f674",
@@ -275,6 +275,28 @@
 			"folder": "5f1466b2-e6a4-0eb8-e284-70c44a899be4"
 		},
 		{
+			"id": "69888953-d0b2-7e43-cc34-191476c633fa",
+			"headers": "",
+			"url": "{{webservice}}/pets",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
+			"data": [],
+			"dataMode": "params",
+			"name": "Pets - Lista de pets",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1428800118491,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\nvar data = JSON.parse(responseBody);\ntests[\"Tem @context\"] = !!data[\"@context\"];\ntests[\"Tem @graph\"] = !!data[\"@graph\"];",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "687924e1-7b6c-9a8d-188a-71d1148ec854",
+			"synced": false
+		},
+		{
 			"id": "7dea2679-c0a2-1c31-b80d-ab579c0450db",
 			"headers": "",
 			"url": "{{webservice}}/pet",
@@ -295,7 +317,8 @@
 			"helperAttributes": {},
 			"collectionOwner": 0,
 			"synced": false,
-			"folder": "687924e1-7b6c-9a8d-188a-71d1148ec854"
+			"folder": "11bf112f-4114-7352-0b23-7ac45b480ab6",
+			"write": true
 		},
 		{
 			"id": "8a15491f-0b4f-8a10-b5fc-404320db11c8",
@@ -326,7 +349,7 @@
 				}
 			],
 			"dataMode": "params",
-			"name": "User - Obter dados do usuario autenticado",
+			"name": "User - Dados usuário autenticado",
 			"description": "",
 			"descriptionFormat": "html",
 			"time": 1428766425059,
@@ -581,25 +604,22 @@
 		{
 			"id": "f6d2b216-cd5b-5018-32cf-84fbd3d421ad",
 			"headers": "",
-			"url": "{{webservice}}/pet",
-			"pathVariables": {},
+			"url": "{{webservice}}/pet/1",
 			"preRequestScript": "",
+			"pathVariables": {},
 			"method": "PUT",
-			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
 			"data": [],
 			"dataMode": "params",
-			"name": "Pet - Atualizar um pet",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1428766515450,
 			"version": 2,
-			"responses": [],
 			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\nvar data = JSON.parse(responseBody);\ntests[\"Tem @context\"] = !!data[\"@context\"];\ntests[\"Tem @graph\"] = !!data[\"@graph\"];",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"collectionOwner": 0,
-			"synced": false,
-			"folder": "687924e1-7b6c-9a8d-188a-71d1148ec854"
+			"time": 1428770063386,
+			"name": "Pet - Atualizar um pet",
+			"description": "",
+			"collectionId": "69adc823-ae1c-af17-b5c8-fc1be79c7263",
+			"responses": [],
+			"synced": false
 		},
 		{
 			"id": "f956dc5c-1c20-1260-2cfd-87c4fa9862a9",
